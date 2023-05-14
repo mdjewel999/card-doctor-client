@@ -28,12 +28,13 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // setLoading
+  // logOut
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
   };
 
+  
   // useEffect
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
